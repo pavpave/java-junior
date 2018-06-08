@@ -1,8 +1,24 @@
 package com.acme.edu;
 
 public class Logger {
+    public static int sum = 0;
+    public static boolean buffer = false;
+
+    public static void flush () {
+        buffer = false;
+        sum = 0;
+    }
+
     public static void log(int message) {
-        System.out.println("primitive: " + message);
+        if (!buffer) {
+            buffer = true;
+            System.out.println("primitive: " + message);
+            sum = sum + message;
+        }
+        else {
+            sum = sum + message;
+            System.out.println("primitive: " + sum);
+        }
     }
 
     public static void log(byte message) {
