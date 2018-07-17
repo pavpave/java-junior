@@ -1,8 +1,6 @@
-package demo;
+package demo.procedure;
 
-import java.io.PrintStream;
-
-import static demo.President.getTheOne;
+import static demo.procedure.President.getTheOne;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +10,10 @@ public class Main {
 
 //Singleton: DP [GoF] (Head First): роли (ответственности) <-> классы
 class President {
+
+    int state;
+    static int classState;
+
     /**
      * IL = Creational Logic
      */
@@ -41,7 +43,8 @@ class President {
     private President() {}
     private String name;
     public void order(String command) { //BL
-
+        String s;
+//        System.out.println(s);
     }
 }
 
