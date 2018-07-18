@@ -3,7 +3,7 @@ package com.db.ooad;
 public class App {
     public static void main(String[] args) {
 //        Logger logger = new Logger(
-//                new ContentSeverityFilter("DEBUG"),
+//                message -> System.out::println,
 //                new ConsoleSaver()
 //        );
 
